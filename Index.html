@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zenix — Discord Bot</title>
+<meta name="description" content="Zenix — Powerful. Secure. Built for Discord.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --bg:#08080c;
+  --panel:#101017;
+  --purple:#985cff;
+  --muted:#9693a5;
+  --border:rgba(255,255,255,.09);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:#fff;
+  font-family:Inter,system-ui,sans-serif;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+nav{
+  max-width:1150px;margin:auto;padding:24px 25px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.logo{font-size:23px;font-weight:900;letter-spacing:-1px}
+.logo span{color:var(--purple)}
+.links{display:flex;gap:28px;color:var(--muted);font-size:13px}
+.links a:hover{color:white}
+.btn{
+  display:inline-block;padding:13px 19px;border-radius:10px;
+  background:var(--purple);color:white;font-weight:700;
+  font-size:13px;transition:.2s;
+}
+.btn:hover{transform:translateY(-3px);filter:brightness(1.15)}
+.hero{
+  min-height:570px;padding:115px 20px 90px;text-align:center;
+  position:relative;overflow:hidden;
+}
+.hero:before{
+  content:"";position:absolute;width:500px;height:350px;
+  background:#773bff;filter:blur(150px);opacity:.19;
+  top:20px;left:50%;transform:translateX(-50%);
+}
+.hero>*{position:relative}
+.tag{
+  display:inline-block;border:1px solid var(--border);
+  padding:8px 13px;border-radius:30px;color:#c4a8ff;
+  font-size:11px;letter-spacing:1px;margin-bottom:28px;
+}
+h1{
+  font-size:clamp(45px,8vw,83px);font-weight:900;
+  letter-spacing:-5px;line-height:1.04;
+}
+h1 span{
+  background:linear-gradient(90deg,#fff,#a77aff);
+  -webkit-background-clip:text;color:transparent;
+}
+.hero p{
+  max-width:540px;margin:24px auto;color:var(--muted);
+  line-height:1.8;font-size:15px;
+}
+.actions{display:flex;gap:12px;justify-content:center;margin-top:30px;flex-wrap:wrap}
+.secondary{background:#17151f;border:1px solid var(--border)}
+section{max-width:1100px;margin:auto;padding:75px 24px}
+.section-head{text-align:center;margin-bottom:40px}
+.section-head h2{font-size:32px;letter-spacing:-1.5px}
+.section-head p{color:var(--muted);font-size:13px;margin-top:12px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.card{
+  background:linear-gradient(145deg,#14131c,#0d0d13);
+  border:1px solid var(--border);border-radius:16px;
+  padding:27px;transition:.25s;
+}
+.card:hover{transform:translateY(-5px);border-color:#8050cf}
+.symbol{font-size:25px;margin-bottom:22px}
+.card h3{font-size:16px;margin-bottom:10px}
+.card p{font-size:13px;line-height:1.7;color:var(--muted)}
+.commands{
+  background:#0e0d14;border:1px solid var(--border);
+  border-radius:16px;padding:24px;max-width:700px;margin:auto;
+}
+.command{
+  display:flex;justify-content:space-between;gap:15px;
+  padding:16px 5px;border-bottom:1px solid var(--border);
+  font-size:13px;
+}
+.command:last-child{border:0}
+.command code{color:#c39cff}
+.command span{color:var(--muted);text-align:right}
+.cta{
+  text-align:center;border:1px solid var(--border);
+  border-radius:20px;padding:55px 20px;
+  background:radial-gradient(ellipse at top,#261747,#100e16 65%);
+}
+.cta h2{font-size:32px;letter-spacing:-1px}
+.cta p{color:var(--muted);margin:14px 0 25px;font-size:13px}
+footer{
+  border-top:1px solid var(--border);padding:27px 20px;
+  text-align:center;color:var(--muted);font-size:12px;
+}
+@media(max-width:700px){
+ .links{gap:13px;font-size:11px}
+ nav{padding:20px 16px}
+ .nav-btn{display:none}
+ .hero{padding-top:90px;min-height:520px}
+ h1{letter-spacing:-3px}
+ .cards{grid-template-columns:1fr}
+ section{padding:55px 18px}
+ .command{font-size:12px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="#">ZENIX<span>.</span></a>
+  <div class="links">
+    <a href="#features">Features</a>
+    <a href="#commands">Commands</a>
+    <a href="#about">About</a>
+  </div>
+  <a class="btn nav-btn" href="#invite">Get Zenix ↗</a>
+</nav>
+
+<header class="hero">
+  <div class="tag">DISCORD BOT • NEXT GENERATION</div>
+  <h1>More control.<br><span>Less chaos.</span></h1>
+  <p>
+    Meet Zenix — a powerful Discord bot built to help
+    communities stay organized, secure and under control.
+  </p>
+  <div class="actions">
+    <a class="btn" href="#invite">Add Zenix ↗</a>
+    <a class="btn secondary" href="#commands">Explore commands</a>
+  </div>
+</header>
+
+<section id="features">
+  <div class="section-head">
+    <h2>Built for your community.</h2>
+    <p>Tools designed to make server management easier.</p>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <div class="symbol">🛡️</div>
+      <h3>Server protection</h3>
+      <p>Moderation tools to help keep your community organized and safer.</p>
+    </div>
+    <div class="card">
+      <div class="symbol">⚙️</div>
+      <h3>Easy management</h3>
+      <p>Useful commands and simple controls for everyday server tasks.</p>
+    </div>
+    <div class="card">
+      <div class="symbol">✨</div>
+      <h3>Made for communities</h3>
+      <p>A flexible bot experience designed around your Discord server.</p>
+    </div>
+  </div>
+</section>
+
+<section id="commands">
+  <div class="section-head">
+    <h2>Command preview.</h2>
+    <p>A preview of the command system.</p>
+  </div>
+  <div class="commands">
+    <div class="command"><code>.help</code><span>View available commands</span></div>
+    <div class="command"><code>.ping</code><span>Check bot response</span></div>
+    <div class="command"><code>.userinfo</code><span>View user information</span></div>
+    <div class="command"><code>.serverinfo</code><span>View server information</span></div>
+    <div class="command"><code>.avatar</code><span>View a user's avatar</span></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="cta">
+    <h2>Ready for something better?</h2>
+    <p>Bring Zenix into your Discord community.</p>
+    <a class="btn" href="#invite">Get started ↗</a>
+  </div>
+</section>
+
+<section id="invite" style="padding-top:0;text-align:center">
+  <p style="color:#9693a5;font-size:13px">
+    Add your official Zenix bot invite link here when ready.
+  </p>
+</section>
+
+<footer>
+  Zenix © 2026 · Powerful. Secure. Built for Discord.
+  <br><br>Made by !Notrace
+</footer>
+
+</body>
+</html>
